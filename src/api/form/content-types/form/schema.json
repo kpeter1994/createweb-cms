@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forms",
+  "info": {
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "Form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "formElements": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.input",
+        "shared.select",
+        "block.content",
+        "shared.input-checkbox"
+      ]
+    },
+    "page2": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.input-checkbox",
+        "shared.input",
+        "block.content",
+        "shared.select"
+      ]
+    },
+    "form_blocks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::form-block.form-block",
+      "mappedBy": "form"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_block_services",
+  "info": {
+    "displayName": "Services",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "tabs": {
+      "displayName": "Tabs",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tabs"
+    }
+  }
+}

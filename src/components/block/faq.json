@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_block_faqs",
+  "info": {
+    "displayName": "FAQ",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "accordion": {
+      "displayName": "Accordion",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.accordion"
+    }
+  }
+}

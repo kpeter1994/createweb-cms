@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_blocks",
+  "info": {
+    "singularName": "form-block",
+    "pluralName": "form-blocks",
+    "displayName": "FormBlock"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FormComponents": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.input-checkbox",
+        "shared.input",
+        "shared.select"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "form": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::form.form",
+      "inversedBy": "form_blocks"
+    }
+  }
+}

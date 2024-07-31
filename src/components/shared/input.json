@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_inputs",
+  "info": {
+    "displayName": "inputText",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

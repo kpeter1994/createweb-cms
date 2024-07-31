@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landings",
+  "info": {
+    "singularName": "landing",
+    "pluralName": "landings",
+    "displayName": "landing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.hero"
+    },
+    "cards": {
+      "displayName": "Cards",
+      "type": "component",
+      "repeatable": false,
+      "component": "block.cards"
+    },
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.content"
+    },
+    "testimonial": {
+      "displayName": "Testimonial",
+      "type": "component",
+      "repeatable": false,
+      "component": "block.testimonial"
+    },
+    "price": {
+      "displayName": "Price",
+      "type": "component",
+      "repeatable": false,
+      "component": "block.price"
+    },
+    "cta": {
+      "displayName": "Cta",
+      "type": "component",
+      "repeatable": false,
+      "component": "block.cta"
+    },
+    "form": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.content"
+    },
+    "faq": {
+      "displayName": "FAQ",
+      "type": "component",
+      "repeatable": false,
+      "component": "block.faq"
+    },
+    "services": {
+      "displayName": "Services",
+      "type": "component",
+      "repeatable": false,
+      "component": "block.services"
+    },
+    "seo": {
+      "displayName": "Seo",
+      "type": "component",
+      "repeatable": false,
+      "component": "block.seo"
+    },
+    "popup": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.popup"
+    }
+  }
+}

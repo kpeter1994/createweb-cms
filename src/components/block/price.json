@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_block_prices",
+  "info": {
+    "displayName": "Price",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "card": {
+      "displayName": "priceCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.price-card"
+    }
+  }
+}

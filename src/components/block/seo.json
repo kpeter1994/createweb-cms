@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_block_seos",
+  "info": {
+    "displayName": "Seo",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "MetaTitle": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "MetaDescription": {
+      "type": "string",
+      "maxLength": 147,
+      "minLength": 50
+    },
+    "canonical": {
+      "type": "string"
+    },
+    "MetaImege": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "StructuredData": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_block_cards",
+  "info": {
+    "displayName": "WhyWe",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "card": {
+      "displayName": "card",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    }
+  }
+}

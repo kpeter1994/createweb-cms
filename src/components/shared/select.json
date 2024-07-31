@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_selects",
+  "info": {
+    "displayName": "InputSelect",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "options": {
+      "type": "json"
+    }
+  }
+}

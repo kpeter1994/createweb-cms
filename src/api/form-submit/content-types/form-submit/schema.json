@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_submits",
+  "info": {
+    "singularName": "form-submit",
+    "pluralName": "form-submits",
+    "displayName": "FormSubmit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "required": false,
+      "regex": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    },
+    "message": {
+      "type": "string"
+    }
+  }
+}

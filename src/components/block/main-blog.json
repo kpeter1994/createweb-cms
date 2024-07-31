@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_block_main_blogs",
+  "info": {
+    "displayName": "mainBlog"
+  },
+  "options": {},
+  "attributes": {
+    "blog": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blog.blog"
+    }
+  }
+}

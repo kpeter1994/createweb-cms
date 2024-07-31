@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_price_cards",
+  "info": {
+    "displayName": "priceCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "text": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}
