@@ -14,7 +14,7 @@
     "FormComponents": {
       "type": "dynamiczone",
       "components": [
-        "shared.input-checkbox",
+        "form.input-checkbox",
         "shared.input",
         "shared.select"
       ]

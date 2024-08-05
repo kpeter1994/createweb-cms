@@ -989,20 +989,10 @@ export interface ApiFormForm extends Schema.CollectionType {
     title: Attribute.String;
     text: Attribute.String;
     formElements: Attribute.DynamicZone<
-      [
-        'shared.input',
-        'shared.select',
-        'block.content',
-        'shared.input-checkbox'
-      ]
+      ['shared.input', 'shared.select', 'block.content', 'form.input-checkbox']
     >;
     page2: Attribute.DynamicZone<
-      [
-        'shared.input-checkbox',
-        'shared.input',
-        'block.content',
-        'shared.select'
-      ]
+      ['form.input-checkbox', 'shared.input', 'block.content', 'shared.select']
     >;
     form_blocks: Attribute.Relation<
       'api::form.form',
@@ -1031,7 +1021,7 @@ export interface ApiFormBlockFormBlock extends Schema.CollectionType {
   };
   attributes: {
     FormComponents: Attribute.DynamicZone<
-      ['shared.input-checkbox', 'shared.input', 'shared.select']
+      ['form.input-checkbox', 'shared.input', 'shared.select']
     >;
     title: Attribute.String;
     form: Attribute.Relation<
@@ -1083,48 +1073,6 @@ export interface ApiFormSubmitFormSubmit extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::form-submit.form-submit',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiLandingLanding extends Schema.CollectionType {
-  collectionName: 'landings';
-  info: {
-    singularName: 'landing';
-    pluralName: 'landings';
-    displayName: 'landing';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    slug: Attribute.UID;
-    hero: Attribute.Component<'block.hero'>;
-    cards: Attribute.Component<'block.cards'>;
-    content: Attribute.Component<'block.content'>;
-    testimonial: Attribute.Component<'block.testimonial'>;
-    price: Attribute.Component<'block.price'>;
-    cta: Attribute.Component<'block.cta'>;
-    form: Attribute.Component<'block.content'>;
-    faq: Attribute.Component<'block.faq'>;
-    services: Attribute.Component<'block.services'>;
-    seo: Attribute.Component<'block.seo'>;
-    popup: Attribute.Component<'block.popup'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::landing.landing',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::landing.landing',
       'oneToOne',
       'admin::user'
     > &
@@ -1233,7 +1181,6 @@ declare module '@strapi/types' {
       'api::form.form': ApiFormForm;
       'api::form-block.form-block': ApiFormBlockFormBlock;
       'api::form-submit.form-submit': ApiFormSubmitFormSubmit;
-      'api::landing.landing': ApiLandingLanding;
       'api::navigation.navigation': ApiNavigationNavigation;
       'api::page.page': ApiPagePage;
     }

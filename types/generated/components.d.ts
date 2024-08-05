@@ -169,6 +169,18 @@ export interface BlockTestimonial extends Schema.Component {
   };
 }
 
+export interface FormInputCheckbox extends Schema.Component {
+  collectionName: 'components_shared_input_checkbox_s';
+  info: {
+    displayName: 'InputCheckbox ';
+    description: '';
+  };
+  attributes: {
+    label: Attribute.String;
+    options: Attribute.JSON;
+  };
+}
+
 export interface SharedAccordion extends Schema.Component {
   collectionName: 'components_shared_accordions';
   info: {
@@ -191,32 +203,6 @@ export interface SharedCard extends Schema.Component {
     title: Attribute.String;
     text: Attribute.String;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
-}
-
-export interface SharedFormSection extends Schema.Component {
-  collectionName: 'components_shared_form_sections';
-  info: {
-    displayName: 'FormSection';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    text: Attribute.String;
-    textInput: Attribute.Component<'shared.input', true>;
-    select: Attribute.Component<'shared.select', true>;
-  };
-}
-
-export interface SharedInputCheckbox extends Schema.Component {
-  collectionName: 'components_shared_input_checkbox_s';
-  info: {
-    displayName: 'InputCheckbox ';
-    description: '';
-  };
-  attributes: {
-    label: Attribute.String;
-    options: Attribute.JSON;
   };
 }
 
@@ -284,6 +270,8 @@ export interface SharedPriceCard extends Schema.Component {
           preset: 'toolbar';
         }
       >;
+    theme: Attribute.Enumeration<['light', 'dark']> &
+      Attribute.DefaultTo<'light'>;
   };
 }
 
@@ -373,10 +361,9 @@ declare module '@strapi/types' {
       'block.seo': BlockSeo;
       'block.services': BlockServices;
       'block.testimonial': BlockTestimonial;
+      'form.input-checkbox': FormInputCheckbox;
       'shared.accordion': SharedAccordion;
       'shared.card': SharedCard;
-      'shared.form-section': SharedFormSection;
-      'shared.input-checkbox': SharedInputCheckbox;
       'shared.input': SharedInput;
       'shared.link': SharedLink;
       'shared.meta-social': SharedMetaSocial;

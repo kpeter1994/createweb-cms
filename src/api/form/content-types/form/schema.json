@@ -24,13 +24,13 @@
         "shared.input",
         "shared.select",
         "block.content",
-        "shared.input-checkbox"
+        "form.input-checkbox"
       ]
     },
     "page2": {
       "type": "dynamiczone",
       "components": [
-        "shared.input-checkbox",
+        "form.input-checkbox",
         "shared.input",
         "block.content",
         "shared.select"
